@@ -1,0 +1,330 @@
+
+function scram(){
+  var combos = [
+    "R2",
+    "'R2",
+    "R",
+    "'R",
+    "'M",
+    "M",
+    "M2",
+    "'M2",
+    "L",
+    "'L",
+    "L2",
+    "'L2",
+    "'D",
+    "D2",
+    "'D2",
+    "D",
+    "'U",
+    "U2",
+    "U",
+    "'U2",
+    "R2",
+    "'R2",
+    "R",
+    "'R",
+    "'M",
+    "M",
+    "M2",
+    "'M2",
+    "L",
+    "'L",
+    "L2",
+    "'L2",
+    "'D",
+    "D2",
+    "'D2",
+    "D",
+    "'U",
+    "U2",
+    "U",
+    "'U2",
+    "R2",
+    "'R2",
+    "R",
+    "'R",
+    "'M",
+    "M",
+    "M2",
+    "'M2",
+    "L",
+    "'L",
+    "L2",
+    "'L2",
+    "'D",
+    "D2",
+    "'D2",
+    "D",
+    "'U",
+    "U2",
+    "U",
+    "'U2",
+    "R2",
+    "'R2",
+    "R",
+    "'R",
+    "'M",
+    "M",
+    "M2",
+    "'M2",
+    "L",
+    "'L",
+    "L2",
+    "'L2",
+    "'D",
+    "D2",
+    "'D2",
+    "D",
+    "'U",
+    "U2",
+    "U",
+    "'U2"
+  ];
+  var comm = [];
+  for (; comm.length < 21; ) {
+    comm.push(combos[Math.floor(combos.length * Math.random())]);
+    //Duplicate Pair Remover
+    comm.map(function(A) {
+      return A.replace(/"R","R"/g, "R2");
+    });
+    comm.map(function(B) {
+      return B.replace(/"'R","'R"/g, "'R2");
+    });
+    comm.map(function(C) {
+      return C.replace(/"L","L"/g, "L2");
+    });
+    comm.map(function(D) {
+      return D.replace(/"'L","'L"/g, "'L2");
+    });
+    comm.map(function(E) {
+      return E.replace(/"M","M"/g, "M2");
+    });
+    comm.map(function(F) {
+      return F.replace(/"'M","'M"/g, "'M2");
+    });
+    comm.map(function(G) {
+      return G.replace(/"U","U"/g, "U2");
+    });
+    comm.map(function(H) {
+      return H.replace(/"'U","'U"/g, "'U2");
+    });
+    comm.map(function(I) {
+      return I.replace(/"'D","'D"/g, "'D2");
+    });
+    comm.map(function(J) {
+      return J.replace(/"D","D"/g, "D2");
+    });
+    // Double Move Remover
+    comm.map(function(K) {
+      return K.replace(/"'L","L"/g, "L");
+    });
+    comm.map(function(L) {
+      return L.replace(/"L","'L"/g, "'L");
+    });
+    comm.map(function(M) {
+      return M.replace(/"M","'M"/g, "M");
+    });
+    comm.map(function(N) {
+      return N.replace(/"'M","M"/g, "'M");
+    });
+    comm.map(function(O) {
+      return O.replace(/"U","'U"/g, "U");
+    });
+    comm.map(function(P) {
+      return P.replace(/"'U","U"/g, "'U");
+    });
+    comm.map(function(Q) {
+      return Q.replace(/"'D","D"/g, "D");
+    });
+    comm.map(function(R) {
+      return R.replace(/"D","'D"/g, "'D");
+    });
+    comm.map(function(S) {
+      return S.replace(/"'R","'R"/g, "R");
+    });
+    comm.map(function(T) {
+      return T.replace(/"'R","R"/g, "'R");
+    });
+
+    //2 Move Alg Fix
+    comm.map(function(AA) {
+      return AA.replace(/"R2","R2"/g, "R2");
+    });
+    comm.map(function(BB) {
+      return BB.replace(/"'R2","'R2"/g, "'R2");
+    });
+    comm.map(function(CC) {
+      return CC.replace(/"L2","L2"/g, "L2");
+    });
+    comm.map(function(DD) {
+      return DD.replace(/"'L2","'L2"/g, "'L2");
+    });
+    comm.map(function(EE) {
+      return EE.replace(/"M2","M2"/g, "M2");
+    });
+    comm.map(function(FF) {
+      return FF.replace(/"'M2","'M2"/g, "'M2");
+    });
+    comm.map(function(GG) {
+      return GG.replace(/"U2","U2"/g, "U2");
+    });
+    comm.map(function(HH) {
+      return HH.replace(/"'U2","'U2"/g, "'U2");
+    });
+    comm.map(function(II) {
+      return II.replace(/"'D2","'D2"/g, "'D2");
+    });
+    comm.map(function(JJ) {
+      return JJ.replace(/"D2","D2"/g, "D2");
+    });
+    // 2 Move Double Move Remover
+    comm.map(function(KK) {
+      return KK.replace(/"'L2","L2"/g, "L");
+    });
+    comm.map(function(LL) {
+      return LL.replace(/"L2","'L2"/g, "'L");
+    });
+    comm.map(function(MM) {
+      return MM.replace(/"M2","'M2"/g, "M");
+    });
+    comm.map(function(NN) {
+      return NN.replace(/"'M2","M2"/g, "'M");
+    });
+    comm.map(function(OO) {
+      return OO.replace(/"U2","'U2"/g, "U");
+    });
+    comm.map(function(PP) {
+      return PP.replace(/"'U2","U2"/g, "'U");
+    });
+    comm.map(function(QQ) {
+      return QQ.replace(/"'D2","D2"/g, "D");
+    });
+    comm.map(function(RR) {
+      return RR.replace(/"D2","'D2"/g, "'D");
+    });
+    comm.map(function(SS) {
+      return SS.replace(/"'R2","'R2"/g, "R");
+    });
+    comm.map(function(TT) {
+      return TT.replace(/"'R2","R2"/g, "'R");
+    });
+    document.getElementById('outputs').value = comm;
+   
+    
+  }
+}
+var clsStopwatch = function() {
+  // Private vars
+  var startAt = 0; // Time of last start / resume. (0 if not running)
+  var lapTime = 0; // Time on the clock when last stopped in milliseconds
+
+  var now = function() {
+    return new Date().getTime();
+  };
+
+  // Public methods
+  // Start or resume
+  this.start = function() {
+    startAt = startAt ? startAt : now();
+  };
+
+  // Stop or pause
+  this.stop = function() {
+    // If running, update elapsed time otherwise keep it
+    lapTime = startAt ? lapTime + now() - startAt : lapTime;
+    startAt = 0; // Paused
+  };
+
+  // Reset
+  this.reset = function() {
+    lapTime = startAt = 0;
+  };
+
+  // Duration
+  this.time = function() {
+    return lapTime + (startAt ? now() - startAt : 0);
+  };
+};
+
+var x = new clsStopwatch();
+var $time;
+var clocktimer;
+
+function pad(num, size) {
+  var s = "0000" + num;
+  return s.substr(s.length - size);
+}
+
+function formatTime(time) {
+  var h = (m = s = ms = 0);
+  var newTime = "";
+
+  h = Math.floor(time / (60 * 60 * 1000));
+  time = time % (60 * 60 * 1000);
+  m = Math.floor(time / (60 * 1000));
+  time = time % (60 * 1000);
+  s = Math.floor(time / 1000);
+  ms = time % 1000;
+
+  newTime = pad(h, 2) + ":" + pad(m, 2) + ":" + pad(s, 2) + ":" + pad(ms, 3);
+  return newTime;
+}
+
+function show() {
+  $time = document.getElementById("time");
+  update();
+}
+
+function update() {
+  $time.innerHTML = formatTime(x.time());
+}
+
+function start() {
+  clocktimer = setInterval("update()", 0);
+  x.start();
+  playAudio();
+}
+
+function stop() {
+  x.stop();
+  clearInterval(clocktimer);
+}
+
+function reset() {
+  stop();
+  x.reset();
+  update();
+}
+// Play Audio
+var y = document.getElementById("myAudio");
+
+function playAudio() {
+  y.play();
+}
+
+function pauseAudio() {
+  y.pause();
+}
+// Keypress Script
+var pressed = true;
+document.body.onkeyup = function(e) {
+  if (e.keyCode == 32) {
+    if (pressed) {
+      setTimeout(start, 000);
+      pressed = false;
+    } else {
+      stop();
+        scram();
+     
+      pressed = true;
+    }
+  }
+  if (e.keyCode == 82) {
+    reset();
+  }
+};
+
+
+
